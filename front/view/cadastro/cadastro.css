@@ -1,0 +1,32 @@
+/*---------------------------------------------------
+                    Principal
+---------------------------------------------------*/
+.section-main{ 
+    padding:10px 0px; 
+    background-color:#f4f4f4; 
+    width:100%; 
+}
+
+.section-main .content {
+    padding:1em 0;    
+    float:left; 
+}
+
+/*---------------------------------------------------
+                    Componenes
+---------------------------------------------------*/
+
+.form_input{    
+    background: solid;   
+    background-color: #fff;
+    border-color: black;
+    color: black;
+}
+
+/*---------------------------------------------------
+                    Rodapé
+---------------------------------------------------*/
+
+.main_footer{ 
+    position: fixed;
+}

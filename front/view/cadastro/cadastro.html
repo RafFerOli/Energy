@@ -1,0 +1,129 @@
+<!-- Página de cadastro de novos clientes-->
+<!DOCTYPE HTML>
+<html>	
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">		
+		<link rel="stylesheet" type="text/css" href="../../css/basicos.css">
+		<link rel="stylesheet" type="text/css" href="cadastro.css">
+		
+		<!-- Titulo da aplicação -->
+		<title>Energy</title>
+	</head>
+	<body>
+		
+		<!-- Cabeçalho de informações do sistema-->
+		<header class="main_header container">   				
+			<div class="content">
+				<h2>Cadastro de Itens</h2>
+			</div>
+		</header>
+
+		<!-- Menu de navegação do sistema -->
+		<nav  class="main_nav container">   	
+			<ul style="margin-left: 0.5%;" class="menu">
+			</ul>	
+		</nav>
+
+		<!-- Corpo principal da página-->
+		<main class="main_content container">
+
+			<section class="section-main container">
+
+				<div class="content">
+                        
+					<!--Inícia Formulário-->
+
+					<div class="container_form">
+							
+                        <h1>Formulário de Cadastro</h1>
+
+                        <form class="form" id="Cadastro-form">
+
+							<!-- Campos de visualização - Nome -->
+							<div class="form_grupo">
+									<label for="nome" class="form_label">Nome:</label>
+									<input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+							</div>								                                
+			
+							<!-- Campos de Edição/visualização - Compacidade/Superfície-->
+							<div class="form_grupo">
+								<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+									   <label for="compacidade" class="form_label">Compacidade relativa:</label>
+									   <input type="number" name="compacidade" class="form_input" id="compacidade" step="0.00" placeholder="Compacidade" required>
+								</div>
+								<div class="form_subgrupo" style="width: 49%;">
+									<label for="superficie" class="form_label">Área de Superfície:</label>
+									   <input type="number" name="superficie" class="form_input" id="superficie" step="0.00" placeholder="Superfície" required>
+								</div>
+							</div>
+			
+							<!-- Campos de Edição/visualização - Parede/Telhado-->
+							<div class="form_grupo">
+								<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+									   <label for="parede" class="form_label">Área da Parede:</label>
+									   <input type="number" name="parede" class="form_input" id="parede" step="0.00" placeholder="Parede" required>
+								</div>
+								<div class="form_subgrupo" style="width: 49%;">
+									<label for="telhado" class="form_label">Área do Telhado:</label>
+									   <input type="number" name="telhado" class="form_input" id="telhado" step="0.00" placeholder="Telhado" required>
+								</div>
+							</div>
+			
+							<!-- Campos de Edição/visualização - Altura/Orientação-->
+							<div class="form_grupo">
+								<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+									   <label for="altura" class="form_label">Altura Total:</label>
+									   <input type="number" name="altura" class="form_input" id="altura" step="0.00" placeholder="Altura" required>
+								</div>
+								<div class="form_subgrupo" style="width: 49%;">
+									<label for="orientacao" class="form_label">Orientação:</label>
+									   <input type="number" name="orientacao" class="form_input" id="orientacao" step="0.00" placeholder="Orientação" required>
+								</div>
+							</div>
+			
+							<!-- Campos de Edição/visualização - Altura/Orientação-->
+							<div class="form_grupo">
+								<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+									   <label for="envidracamento" class="form_label">Área de Envidraçamento:</label>
+									   <input type="number" name="envidracamento" class="form_input" id="envidracamento" step="0.00" placeholder="Envidraçamento" required>
+								</div>
+								<div class="form_subgrupo" style="width: 49%;">
+									<label for="distribuicao" class="form_label">Distribuição da Área Envidraçada:</label>
+									   <input type="number" name="distribuicao" class="form_input" id="distribuicao" step="0.00" placeholder="Distribuição" required>
+								</div>
+							</div>
+								
+							<!-- Botão para salvar Cadastro -->
+							<div class="form_grupo">								
+								<button type="button" name="Cadastrar" onclick="novoItem()" class="submit_btn" >Cadastrar</button>						  
+							</div>
+
+						</form>		
+						
+					</div>				
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- Rodapé -->
+		<footer class="main_footer container">
+			<div class="main_footer_copy">
+		
+				<p class="m-b-footer"> Rafael - 2024, todos os direitos reservados.</p> 
+				<p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rafael Fernandes</p>
+			
+			</div>
+		</footer>
+	
+		<script src="..\..\script.js"></script>
+		<script src="cadastro.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,121 @@
+/*---------------------------------------------------
+
+                    Formulário
+
+---------------------------------------------------*/
+.container_form {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction:column;
+    background:#e7f8e6; 
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    border-radius:3px; 
+    padding:1em;
+}
+
+.container_form h1 {    
+    font-family:'open_sansregular';
+    font-size: 2.3em;
+    color: hsl(103, 74%, 14%);
+    border-bottom: 1px #f0eded solid;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/*---------------------------------------------------
+
+                    Grupos  
+   
+    margin-bottom: 10px; 
+---------------------------------------------------*/
+
+.form_grupo {    
+    width: 96%;
+    margin: 1% 2% 0;
+    padding: 0;  
+    position:relative;
+    display: inline-block;
+}
+
+.form_subgrupo {
+    width: 50%;
+    margin: 0;  
+    padding: 0;     
+    position: relative; 
+    float: left;   
+}
+
+.form_grupo .legenda { 
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------
+
+                    Componentes
+
+---------------------------------------------------*/
+.form_input {
+    color: hsl(103, 74%, 14%);
+    font-size: 16px;
+    font-family: inherit;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px #f2f2f2 solid;    
+    outline: none;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.form_button {       
+    width: 100%;    
+    height: 100%;
+    display: block;
+    padding: 5px 0px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #444444;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-size: 25px;
+    font-family:'open_sansregular';
+    border-radius: 6px;          
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.form_button:hover {
+    background-color: rgb(22, 141, 28);
+    transform: scale(1.03);
+}
+
+.submit { 
+    width:100%;  
+    text-align: left;   
+}
+
+.submit_btn {       
+    display: block;
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: #444444;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-size: 25px;
+    font-family:'open_sansregular';
+    border-radius: 6px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit_btn:hover {
+    background-color: rgb(22, 141, 28);
+    transform: scale(1.03);
+}

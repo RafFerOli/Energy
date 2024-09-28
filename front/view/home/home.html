@@ -1,0 +1,183 @@
+<!-- Página ininical de navegação do sistema-->
+<!DOCTYPE HTML>
+<html>	
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/tabela.css">
+		<link rel="stylesheet" type="text/css" href="../../css/basicos.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+		
+		<!-- Titulo da aplicação -->
+		<title>Energy</title>
+	</head>
+
+	<body>
+		
+		<!-- Cabeçalho de informações do sistema -->
+		<header class="main_header container">   				
+			<div class="content">
+				<h2>Tabela de Eficiência Energética</h2>
+			</div>
+		</header>
+
+		<!-- Menu de navegação do sistema -->
+		<nav  class="main_nav container">   	
+			<ul style="margin-left: 0.5%;" class="menu">
+				<li><a href="../lista/lista.html"><b>Lista Completa</b></a></li>				
+			</ul>	
+		</nav>
+
+		<!-- Corpo principal da tela -->
+        <main class="main_content container">
+
+			<!-- Área de visualização de dados -->
+			<section class="section-main container">     
+				<div class="content">
+
+					<!-- Campos de visualização - Nome -->
+					<div class="form_grupo">
+							<label for="nome" class="form_label">Nome:</label>
+							<input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" style="background-color: gainsboro;" readonly>
+					</div>								                                
+
+					<!-- Campos de Edição/visualização - Compacidade/Superfície-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="compacidade" class="form_label">Compacidade relativa:</label>
+							   <input type="number" name="compacidade" class="form_input" id="compacidade" step="0.00" placeholder="Compacidade" required>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="superficie" class="form_label">Área de Superfície:</label>
+							   <input type="number" name="superficie" class="form_input" id="superficie" step="0.00" placeholder="Superfície" required>
+						</div>
+					</div>
+
+					<!-- Campos de Edição/visualização - Parede/Telhado-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="parede" class="form_label">Área da Parede:</label>
+							   <input type="number" name="parede" class="form_input" id="parede" step="0.00" placeholder="Parede" required>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="telhado" class="form_label">Área do Telhado:</label>
+							   <input type="number" name="telhado" class="form_input" id="telhado" step="0.00" placeholder="Telhado" required>
+						</div>
+					</div>
+
+					<!-- Campos de Edição/visualização - Altura/Orientação-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="altura" class="form_label">Altura Total:</label>
+							   <input type="number" name="altura" class="form_input" id="altura" step="0.00" placeholder="Altura" required>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="orientacao" class="form_label">Orientação:</label>
+							   <input type="number" name="orientacao" class="form_input" id="orientacao" step="0.00" placeholder="Orientação" required>
+						</div>
+					</div>
+
+					<!-- Campos de Edição/visualização - Altura/Orientação-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="envidracamento" class="form_label">Área de Envidraçamento:</label>
+							   <input type="number" name="envidracamento" class="form_input" id="envidracamento" step="0.00" placeholder="Envidraçamento" required>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="distribuicao" class="form_label">Distribuição da Área Envidraçada:</label>
+							   <input type="number" name="distribuicao" class="form_input" id="distribuicao" step="0.00" placeholder="Distribuição" required>
+						</div>
+					</div>
+
+					<!-- Botão para salvar e gerar novo cadastro -->
+					<div class="form_grupo" style="width: 40%; float: right;">						
+						<div class="form_subgrupo" style="width: 58%; margin-right: 2%; margin-top: 1%;">
+							<button type="button" name="atualizar" class="form_button"  onclick="Atualizar()">Atualizar</button>
+						</div>
+						<div class="form_subgrupo" style="width: 40%; margin-top: 1%;">
+							<button type="button" name="Novo" class="form_button"  onclick="openPopup('../cadastro/cadastro.html')">Novo</button>
+						</div>	
+					</div>	
+
+					<!-- Campos de Edição/visualização - Carga de Aquecimento/Resfriamento-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="cgaquecimento" class="form_label">Carga de Aquecimento:</label>
+							   <input type="number" name="cgaquecimento" class="form_input" id="cgaquecimento" step="0.00" placeholder="Aquecimento" style="background-color: gainsboro;" readonly>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="cgresfriamento" class="form_label">Carga de Resfriamento:</label>
+							   <input type="number" name="cgresfriamento" class="form_input" id="cgresfriamento" step="0.00" placeholder="Resfriamento" style="background-color: gainsboro;" readonly>
+						</div>
+					</div>
+
+					<!-- Campos de Edição/visualização - Eficiência de Aquecimento/Resfriamento-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 49%; margin-right: 2%;">
+							   <label for="efaquecimento" class="form_label">Eficiência de Aquecimento:</label>
+							   <input type="text" name="efaquecimento" class="form_input" id="efaquecimento" placeholder="Aquecimento" style="background-color: gainsboro;" readonly>
+						</div>
+						<div class="form_subgrupo" style="width: 49%;">
+							<label for="efresfriamento" class="form_label">Eficiência de Resfriamento:</label>
+							   <input type="text" name="efresfriamento" class="form_input" id="efresfriamento" placeholder="Resfriamento" style="background-color: gainsboro;" readonly>
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+			<!-- Seção de visualização de tabela -->
+			<section class="section-table container">    
+				<div class="content">
+
+					<!-- Campo de pesquisa -->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 58%; margin-right: 1%;">
+							<label for="pesquisa" class="form_label">Pesquisa:</label>
+							<input type="text" name="pesquisa" class="form_input" id="pesquisa" placeholder="Nome" required>
+						</div>
+						<div class="form_subgrupo" style="width: 20%; margin-right: 1%; margin-top: 2%;">
+							<button type="button" name="Pesquisar" class="form_button" onclick="Pesquisar()">Pesquisar</button>
+						</div>	
+						<div class="form_subgrupo" style="width: 20%; margin-top: 2%;">
+							<button type="button" name="Novo" class="form_button"  onclick="location.reload()">Recarregar</button>
+						</div>	
+					</div>		
+
+					<!-- Tabela de regisros para visualização -->
+					<div class="table-container" style="max-height: 416px;">
+						<table id="tabela">
+							<tr>
+								<th style="width: 30%;">Nome</th>
+								<th style="width: 33%">Eficiência de Aquecimento</th>
+								<th style="width: 33%;">Eficiência de Resfriamento</th>
+								<th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></td>
+							</tr>
+						</table>   
+					</div>
+
+				</div>    
+			</section>
+
+        </main>
+
+		<!-- Rodapé -->
+        <footer class="main_footer container">
+            <div class="main_footer_copy">
+        
+                <p class="m-b-footer"> Rafael - 2024, todos os direitos reservados.</p> 
+                <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rafael Fernandes</p>
+            
+            </div>
+        </footer>
+
+		<script src="home.js"></script>
+		<script src="../../script.js"></script>
+    
+    </body>
+    
+</html>

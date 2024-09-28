@@ -1,0 +1,56 @@
+/*---------------------------------------------------
+
+                    Tabela
+
+---------------------------------------------------*/
+.table-container {
+    display: flex;
+    flex-direction: column;    
+    overflow-y: auto;  /* Adiciona barra de rolagem vertical */
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal */
+    white-space: nowrap; /* Impede que o texto quebre */
+    border: 1px solid #ddd;
+    margin: 1% 0;
+    width: 100%;    
+}
+
+table{    
+    table-layout: auto;
+    background-color: white;    
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;    
+}
+
+th,
+td {  
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0; /* Position the header at the top */
+    z-index: 1; /* Ensure the header is above other content */
+}
+
+tr:nth-child(odd){
+    background-color: #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}  
+
+tr:hover {
+    background: rgb(200, 199, 199);
+}
